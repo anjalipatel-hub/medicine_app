@@ -2,17 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Set height to 100% of the viewport */
+    height: 100vh;
     width: 100%;
     background-color: #f5f5f5;
-    padding: 20px; /* Add some padding to avoid tight corners */
-    box-sizing: border-box; /* Ensures padding is included in the width and height calculations */
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
 .patient-card {
     padding: 20px;
     width: 100%;
-    max-width: 900px; /* Limit the maximum width so that it fits well in one screen */
+    max-width: 900px; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     border-radius: 8px;
@@ -20,12 +20,11 @@
 
 .form-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    gap: 15px; /* Smaller gap to make the form more compact */
+    grid-template-columns: 1fr 1fr;
+    gap: 15px; 
 }
-
 .full-width {
-    grid-column: span 2; /* Takes up the entire row */
+    grid-column: span 2;
 }
 
 .gender-checkboxes {
@@ -34,12 +33,12 @@
     display: flex;
     gap: 15px;
     align-items: center;
-    grid-column: span 2; /* Gender group takes both columns */
+    grid-column: span 2;
 }
 
 .save-button {
     margin-top: 20px;
     display: block;
-    margin-left: auto; /* Align the button to the right */
-    width: 150px; /* Set a consistent button width */
+    margin-left: auto; 
+    width: 150px;
 }

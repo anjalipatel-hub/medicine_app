@@ -46,9 +46,9 @@ const cartReducer = createReducer(
     ...state,
     items: state.items.map(item =>
       item.medicine.id === medicineId
-        ? { ...item, quantity: Math.max(item.quantity - 1, 0) } // Prevent negative quantity
+        ? { ...item, quantity: Math.max(item.quantity - 1, 0) }
         : item
-    ).filter(item => item.quantity > 0) // Remove items with quantity 0
+    ).filter(item => item.quantity > 0) 
   }))
 );
 

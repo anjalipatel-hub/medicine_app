@@ -52,7 +52,7 @@ export class DashboardComponent {
           if (data && data.data && data.data.result) {
             this.medicines = data.data.result.map(medicine => ({
               ...medicine,
-              image: this.getImagePath(medicine)  // Assign image dynamically
+              image: this.getImagePath()
             }));
             if (this.medicines.length === 0) {
               this.openSnackBar('Medicine not available!', 'Close');
@@ -62,7 +62,7 @@ export class DashboardComponent {
           }
         },
         (error) => {
-          console.error('Error fetching medicines:', error);
+          console.log(error);
           this.medicines = [];
         }
       );
@@ -77,7 +77,7 @@ export class DashboardComponent {
       horizontalPosition: 'center'
     });
   }
-  getImagePath(medicine: Medicine): string {
+  getImagePath(): string {
     return `assets/medicineImg.jpg`;
   }
 }

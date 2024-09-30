@@ -67,7 +67,7 @@ export class CheckoutComponent {
           medicine_id: item.medicine.medicine_id,
           quantity: item.quantity
         }));
-      } 
+      }
     })
     const orderPayload = {
       patient_id: this.patientId,
@@ -81,8 +81,6 @@ export class CheckoutComponent {
         full_address: '382415'
       }
     };
-    console.log(orderPayload);
-    debugger;
     this.medicineService.placeOrder(orderPayload).subscribe(
       (response) => {
         if (response.status_code == 0) {
@@ -91,10 +89,9 @@ export class CheckoutComponent {
             verticalPosition: 'top',
             horizontalPosition: 'center',
           });
-        } else {
-          this.snackBar.open('Order Placed Successfully!', 'Close', { duration: 3000 });
-          this.router.navigate(['/']);
         }
+        this.snackBar.open('Order Placed Successfully!', 'Close', { duration: 3000 });
+        this.router.navigate(['/']);
       });
 
   }

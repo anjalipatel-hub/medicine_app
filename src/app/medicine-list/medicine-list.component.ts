@@ -57,10 +57,6 @@ export class MedicineListComponent {
       panelClass: ['snack-bar-success']
     });
 
-    this.store.select(selectCartItems).subscribe(items => {
-      console.log('Current cart items before adding:', items);
-    });
-
     this.store.dispatch(addToCart({ medicine }));
   }
 }

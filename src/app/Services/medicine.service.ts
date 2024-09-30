@@ -26,7 +26,7 @@ export class MedicineService {
       ...patient,
       apikey: key
     };
-    return this.http.post(`${url}`,body);
+    return this.http.post(`${url}`, body);
   }
 
   placeOrder(order: any): Observable<any> {
@@ -35,7 +35,7 @@ export class MedicineService {
       ...order,
       apikey: 'wFIMP75eG1sQEh8vVAdXykgzF4mLhDw3'
     };
-    return this.http.post(`${url}`,body);
+    return this.http.post(`${url}`, body);
   }
 
 }

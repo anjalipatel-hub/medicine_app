@@ -1,5 +1,4 @@
 <div class="checkout-container">
-  <!-- Add a check for cartItems length -->
   <div *ngIf="cartItems$ | async as cartItems; else noItems">
     <div *ngIf="cartItems.length > 0; else noItems">
       <div class="cart-items-container">
@@ -28,7 +27,8 @@
                     <mat-icon>add</mat-icon>
                   </button>
                 </div>
-                <button mat-raised-button color="primary" (click)="onPlaceOrder(item)" class="place-order-button">Place Order</button>
+                <button mat-raised-button color="primary" (click)="onPlaceOrder(item)" class="place-order-button">Place
+                  Order</button>
               </div>
             </div>
           </mat-card-content>

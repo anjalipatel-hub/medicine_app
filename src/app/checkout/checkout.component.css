@@ -5,52 +5,52 @@
 
 .cart-items-container {
   display: flex;
-  flex-wrap: wrap; /* Allows multiple items to wrap into a new line */
-  gap: 10px; /* Spacing between items */
-  justify-content: flex-start; /* Ensure items align side by side */
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
 }
 
 .cart-item {
-  flex: 1 1 calc(33% - 10px); /* Allow 3 items per row with a small gap */
+  flex: 1 1 calc(33% - 10px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px; /* Add some margin at the bottom to separate rows */
+  margin-bottom: 10px;
 }
 
 .item-details {
   display: flex;
-  align-items: flex-start; /* Align items at the top */
+  align-items: flex-start;
 }
 
 .item-image {
-  width: 100px; /* Set a fixed width for images */
-  height: 100px; /* Keep the height consistent */
-  object-fit: cover; /* Make sure the image maintains aspect ratio without overflow */
-  margin-right: 5px; /* Spacing between image and text */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 5px;
 }
 
 .item-info {
-  flex: 1; /* Make info section take remaining space */
+  flex: 1;
 }
 
 .quantity-controls {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the content horizontally */
-  gap: 10px; /* Space between elements */
-  margin-top: 10px; /* Add some space above the quantity controls */
+  justify-content: center; 
+  gap: 10px;
+  margin-top: 10px; 
 }
 
 .quantity-controls button {
-  min-width: 36px; /* Ensure buttons are the same size */
+  min-width: 36px; 
 }
 
 .quantity-controls .quantity {
-  padding: 0 10px; /* Adjust spacing to fit nicely between buttons */
+  padding: 0 10px; 
   font-weight: bold;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 
 .total-price {
@@ -61,7 +61,7 @@
 
 .place-order-button {
   margin-top: 20px;
-  float: right; /* Align button to the right */
+  float: right;
 }
 
 .empty-cart-message {

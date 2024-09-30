@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { CartState, CartItem } from './cart.model'; // Import your CartState and CartItem interfaces
+import { CartState, CartItem } from './cart.model';
 
 export const selectCartState = createFeatureSelector<CartState>('cart');
 

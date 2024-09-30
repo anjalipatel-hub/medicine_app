@@ -65,9 +65,7 @@ export class AddPatientComponent {
 
       this.medicineService.addPatient(formData).subscribe(
         (response) => {
-          console.log(response);
           if (response.status_code == 0) {
-            console.log(response.status_code);
             this.snackBar.open(response.status_message || 'Operation completed.', 'Close', {
               duration: 3000,
               verticalPosition: 'top',
@@ -92,8 +90,6 @@ export class AddPatientComponent {
           }
         },
         (error) => {
-          console.error('Error saving form:', error);
-
           this.snackBar.open('Error saving form. Please try again.', 'Close', {
             duration: 3000,
             verticalPosition: 'top',
