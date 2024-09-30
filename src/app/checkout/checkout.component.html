@@ -1,0 +1,43 @@
+<div class="checkout-container">
+  <!-- Add a check for cartItems length -->
+  <div *ngIf="cartItems$ | async as cartItems; else noItems">
+    <div *ngIf="cartItems.length > 0; else noItems">
+      <div class="cart-items-container">
+        <mat-card *ngFor="let item of cartItems" class="cart-item">
+          <mat-card-header>
+            <mat-card-title>{{ item.medicine.medicine_name }}</mat-card-title>
+            <mat-card-subtitle>
+              Price: {{ item.medicine.mrp | currency }}
+            </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <div class="item-details">
+              <img [src]="item.medicine.image" alt="{{ item.medicine.medicine_name }}" class="item-image" />
+              <div class="item-info">
+                <p><strong>Content:</strong> {{ item.medicine.content }}</p>
+                <p><strong>Packing Size:</strong> {{ item.medicine.packing_size }}</p>
+                <p><strong>Manufacturer:</strong> {{ item.medicine.manufacturer_name }}</p>
+                <p><strong>Total:</strong> {{ (item.medicine.mrp * item.quantity) | currency }}</p>
+                <div class="quantity-controls">
+                  <button mat-icon-button (click)="decreaseQuantity(item)" matTooltip="Decrease Quantity">
+                    <mat-icon>remove</mat-icon>
+                  </button>
+                  <span class="quantity">{{ item.quantity }}</span>
+                  <button mat-icon-button (click)="increaseQuantity(item)" matTooltip="Increase Quantity">
+                    <mat-icon>add</mat-icon>
+                  </button>
+                </div>
+                <button mat-raised-button color="primary" (click)="onPlaceOrder(item)" class="place-order-button">Place Order</button>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noItems>
+    <p class="empty-cart-message">Your cart is empty</p>
+  </ng-template>
+</div>

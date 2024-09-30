@@ -1,0 +1,27 @@
+<div class="dashboard-wrapper">
+    <mat-card class="search-card">
+        <h3 class="search-title">Seach Medicine</h3>
+        <form [formGroup]="searchForm" (ngSubmit)="searchMedicines()" class="search-form">
+           
+            <div class="search-container">
+                <mat-form-field class="search-input" appearance="fill">
+                    <mat-label>Search for Medicines</mat-label>
+                    <input matInput formControlName="query" placeholder="Enter medicine name">
+                    <mat-error
+                        *ngIf="searchForm.get('query')?.hasError('required') && searchForm.get('query')?.touched">
+                        Please enter a medicine name.
+                    </mat-error>
+                    <mat-error
+                        *ngIf="searchForm.get('query')?.hasError('minlength') && searchForm.get('query')?.touched">
+                        Minimum length is 3 characters.
+                    </mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" class="search-button"
+                    [disabled]="searchForm.invalid">Search</button>
+            </div>
+        </form>
+    </mat-card>
+</div>
+
+<app-medicine-list *ngIf="medicines.length > 0" [medicines]="medicines"></app-medicine-list>
+<router-outlet></router-outlet>

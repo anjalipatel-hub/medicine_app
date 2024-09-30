@@ -1,0 +1,72 @@
+.checkout-container {
+  padding: 60px;
+  padding-top: 90px;
+}
+
+.cart-items-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows multiple items to wrap into a new line */
+  gap: 10px; /* Spacing between items */
+  justify-content: flex-start; /* Ensure items align side by side */
+}
+
+.cart-item {
+  flex: 1 1 calc(33% - 10px); /* Allow 3 items per row with a small gap */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Add some margin at the bottom to separate rows */
+}
+
+.item-details {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+}
+
+.item-image {
+  width: 100px; /* Set a fixed width for images */
+  height: 100px; /* Keep the height consistent */
+  object-fit: cover; /* Make sure the image maintains aspect ratio without overflow */
+  margin-right: 5px; /* Spacing between image and text */
+}
+
+.item-info {
+  flex: 1; /* Make info section take remaining space */
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  gap: 10px; /* Space between elements */
+  margin-top: 10px; /* Add some space above the quantity controls */
+}
+
+.quantity-controls button {
+  min-width: 36px; /* Ensure buttons are the same size */
+}
+
+.quantity-controls .quantity {
+  padding: 0 10px; /* Adjust spacing to fit nicely between buttons */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.total-price {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.place-order-button {
+  margin-top: 20px;
+  float: right; /* Align button to the right */
+}
+
+.empty-cart-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+  padding-top: 25px;
+}

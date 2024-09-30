@@ -1,0 +1,7 @@
+/* Ensure the body takes up the entire viewport height */
+
+/* Spacer inside the header to push navigation to the right */
+.spacer {
+  flex: 1;
+}
+

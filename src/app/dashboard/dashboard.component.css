@@ -1,0 +1,89 @@
+.dashboard-wrapper {
+    margin-top: 60px;
+    padding: 5px;
+    border-radius: inherit;
+}
+
+.search-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+
+.search-title {
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: #3f51b5;
+    margin-bottom: 15px;
+}
+
+.search-form {
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.search-input {
+    flex: 1; 
+    margin: 0;
+}
+
+.search-button {
+    font-size: 1em;
+    padding: 10px 20px;
+    height: 56px; 
+    margin-bottom: 40px;
+}
+
+/* Error message styling */
+.mat-error {
+    font-size: 0.9em;
+    color: #d32f2f;
+}
+
+.results-container {
+    margin-top: 20px;
+}
+
+.medicine-card {
+    margin-bottom: 20px;
+}
+
+mat-card-title {
+    font-weight: bold;
+    font-size: 1.2em; /* Title size */
+}
+
+mat-card-content {
+    font-size: 1em; /* Content size */
+    color: #555; /* Text color */
+}
+
+.main-content {
+    padding: 20px;
+    min-height: calc(100vh - 120px); /* Adjust for header and footer height */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+    .dashboard-wrapper {
+        padding: 10px;
+    }
+
+    .search-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        gap: 5px;
+    }
+
+    .search-input, .search-button {
+        width: 100%;
+        margin: 5px 0;
+        margin-bottom: 30px; /* Add some margin to separate the input and button vertically */
+    }
+}
