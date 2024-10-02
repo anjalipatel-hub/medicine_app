@@ -35,6 +35,8 @@ export class MedicineService {
       ...order,
       apikey: 'wFIMP75eG1sQEh8vVAdXykgzF4mLhDw3'
     };
+    console.log(body);
+    debugger;
     return this.http.post(`${url}`, body);
   }
 

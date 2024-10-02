@@ -42,6 +42,7 @@ export class DashboardComponent {
     this.searchForm = this.fb.group({
       query: ['',[Validators.required, Validators.minLength(3)]]
     });
+    console.log( localStorage.getItem('isLoggedIn'))
   }
 
   searchMedicines(): void {

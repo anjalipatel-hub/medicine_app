@@ -41,6 +41,16 @@ export class CheckoutComponent {
     this.route.queryParams.subscribe(params => {
       this.patientId = params['patientId'];
       this.data = params['patientDetails'];
+      if (params['patientDetails']) {
+        try {
+          this.data = JSON.parse(params['patientDetails']);
+        } catch (e) {
+          console.error('Error parsing patientDetails:', e);
+          this.data = {}; // Set to empty object if parsing fails
+        }
+      } else {
+        this.data = {}; // Set to empty object if patientDetails is not provided
+      }
     });
   }
 
@@ -81,6 +91,8 @@ export class CheckoutComponent {
         full_address: '382415'
       }
     };
+    console.log(orderPayload);
+    debugger;
     this.medicineService.placeOrder(orderPayload).subscribe(
       (response) => {
         if (response.status_code == 0) {
@@ -89,9 +101,10 @@ export class CheckoutComponent {
             verticalPosition: 'top',
             horizontalPosition: 'center',
           });
-        }
-        this.snackBar.open('Order Placed Successfully!', 'Close', { duration: 3000 });
+          this.snackBar.open('Order Placed Successfully!', 'Close', { duration: 3000 });
         this.router.navigate(['/']);
+        }
+        
       });
 
   }

@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
     <span>Medicine Order App</span>
     <span class="spacer"></span>
-    <button mat-button routerLink="/">Home</button>
-    <button mat-button routerLink="/dashboard">Dashboard</button>
-    <button mat-button routerLink="/add-patient">Add Patient</button>
-    <button mat-button routerLink="/checkout">Cart</button>
+    <button mat-button routerLink="/" *ngIf="!isLoggedIn">Home</button>
+    <button mat-button routerLink="/dashboard" *ngIf="isLoggedIn">Dashboard</button>
+    <button mat-button routerLink="/add-patient" *ngIf="isLoggedIn">Add Patient</button>
+    <button mat-button routerLink="/checkout" *ngIf="isLoggedIn">Cart</button>
 </mat-toolbar>

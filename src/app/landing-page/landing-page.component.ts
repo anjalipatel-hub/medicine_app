@@ -11,5 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
-
+ngOnInit(): void {
+ localStorage.setItem('isLoggedIn', 'false');
+}
 }
